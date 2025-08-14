@@ -1,37 +1,30 @@
 from functions.get_files_info import get_files_info 
+from functions.get_file_content import get_file_content 
+from functions.write_file import write_file 
+from functions.run_python_file import run_python_file 
 
-def print_get_files(func, dir):
-    if dir == ".":
-        print(f"""
-Result for current directory:
+def print_get_files(func):
+#     if dir == ".":
+#         print(f"""
+# Result for current directory:
+# {func}
+#         """)
+#     else:
+    print(f"""
 {func}
-        """)
-    else:
-        print(f"""
-Result for '{dir}' directory:
-{func}
-        """)
+""")
 
-# test one 
-calculator_test = get_files_info("calculator", ".")
+test1 = run_python_file("calculator", "main.py")
+print_get_files(test1)
 
-print_get_files(calculator_test, ".")
+test2 = run_python_file("calculator", "main.py", "[3 + 5]")
+print_get_files(test2)
 
-# test two
-pkg_test = get_files_info("calculator", "pkg")
-print_get_files(pkg_test, "pkg")
+test3 = run_python_file("calculator", "../main.py")
+print_get_files(test3)
 
-# test three
-bin_test = get_files_info("calculator", "/bin")
-print_get_files(bin_test, "/bin")
-
-# test four 
-out_test = get_files_info("calculator", "../")
-print_get_files(out_test, "../")
-
-
-
-
+test4 = run_python_file("calculator", "nonexistent.py")
+print_get_files(test4)
 
 
 
