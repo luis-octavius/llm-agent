@@ -1,33 +1,37 @@
-# Nome do Projeto
+# LLM Coding Agent
 
-## Descrição
+## Description
 
-Este projeto é um _coding_agent_ que empodera a API do Gemini para interagir com o sistema de arquivos. Permite com que o usuário performe diversas operações como listar arquivos e diretórios, ler conteúdo de arquivos, escrever ou sobrescrever arquivos, e executar arquivos com código em Python. O agente usa um prompt sistematizado para guiar o seu comportamento e um conjunto de funções pré-definidas para interagir com os arquivos do sistema. É criado para automatizar tarefas de código e provê um modo conveniente de manusear arquivos de modo programado.
+This project features a coding_agent that uses the Gemini API to interact with the file system. It enables users to perform a variety of operations, including listing files and directories, reading file content, writing or overwriting files, and executing Python code. Guided by a structured prompt and a suite of predefined functions, the agent is designed to automate coding tasks and offers a convenient, programmatic approach to file management.
 
-## Funcionalidades
+## Functionalities
 
-- Lista arquivos do diretório especificado 
-- Lê os arquivos do diretório 
-- Executa código em Python 
-- Escreve ou sobrescreve arquivos 
+- List files in specified folder
+- Read the files of directory
+- Execute python code
+- Write files
 
-## Como Usar
-1. Faça o clone do repositório:
+## How to use
+1. Clone the repo:
 
 ```bash
 git clone git@github.com:luis-octavius/llm-agent.git 
 cd llm-agent 
 ```
-> [!warning] Originalmente, o diretório utilizado pelo agente é a pasta `llm-agent/archives`, porém, é possível mudar a variável do diretório no arquivo `config`. Use com cuidado! 
-
+  
+  
+> [!WARNING]
+> Originally, the directory used by the agent is `llm-agent/archives`, so, if you want to use in another folder you have to change the constant variable in the config file.    
+  
+  
 2. Execute:
 
 ```bash 
-uv run main.py "<seu_prompt_aqui>" --verbose # a flag verbose é opcional e serve para adicionar estatísticas e a resposta do agente
+uv run main.py "<your_prompt_here>" --verbose # the --verbose flag is optional
 ```
 
-## Requisitos
+## Requirements
 - uv 
-- Python
-- Chave Gemini API 
+- Python 3.2
+- Gemini API Key
  
