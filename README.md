@@ -1,4 +1,4 @@
-# Nome do Projeto
+# LLM Coding Agent
 
 ## Descrição
 
@@ -18,8 +18,12 @@ Este projeto é um _coding_agent_ que empodera a API do Gemini para interagir co
 git clone git@github.com:luis-octavius/llm-agent.git 
 cd llm-agent 
 ```
-> [!warning] Originalmente, o diretório utilizado pelo agente é a pasta `llm-agent/archives`, porém, é possível mudar a variável do diretório no arquivo `config`. Use com cuidado! 
-
+  
+  
+> [!WARNING]
+> Originalmente, o diretório utilizado pelo agente é a pasta `llm-agent/archives`, porém, é possível mudar a variável do diretório no arquivo `config`. Use com cuidado!   
+  
+  
 2. Execute:
 
 ```bash 
