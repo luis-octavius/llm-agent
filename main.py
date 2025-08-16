@@ -7,7 +7,7 @@ from functions.get_files_info import schema_get_files_info, get_files_info
 from functions.run_python_file import schema_run_python_file, run_python_file
 from functions.get_file_content import schema_get_file_content, get_file_content 
 from functions.write_file import schema_write_file, write_file 
-
+from config import *
 
 system_prompt = """
 You are a helpful AI coding agent.
@@ -30,9 +30,6 @@ availabe_functions = types.Tool(
         schema_write_file,
     ]
 )
-
-MAX_ITERS = 20
-
     
 def main():
     # check if there is a prompt message (string) in cli call 
@@ -144,12 +141,10 @@ def call_function(function_call_part, verbose=False): # function_call_part is a 
 
    
     args = dict(function_args)
-    print("Args dict: ", args)
-    args["working_directory"] = "./calculator"
+    args["working_directory"] = WORKING_DIR
 
     function_result = function_map[function_name](**args)
 
-    print("Result: ", function_result)
 
     return types.Content(
         role="tool",
